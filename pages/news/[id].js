@@ -1,9 +1,9 @@
 // import {useRouter} from 'next/router'
 
 export default function NewsId(context) {
-    console.log(context)
-    // 1&&2
-    /*const router = useRouter()
+  console.log(context)
+  // 1&&2
+  /*const router = useRouter()
     const {isFallback} = router
 
     const {post: {results}} = props;
@@ -16,9 +16,8 @@ export default function NewsId(context) {
     }
     return <div>{info}</div>;*/
 
-    // 3.
-    return <div>getServerSideProps</div>
-
+  // 3.
+  return <div>getServerSideProps</div>
 }
 
 // 1.
@@ -44,25 +43,25 @@ export default function NewsId(context) {
 
 // 3.
 export async function getServerSideProps(context) {
-    const data = undefined
+  const data = undefined
 
-    if (!data) {
-        return {
-            // 可以重定向
-            redirect: {
-                destination: '/',
-                permanent: false
-            }
-        }
+  if (!data) {
+    return {
+      // 可以重定向
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
     }
+  }
 
-    /*if (!data){
+  /*if (!data){
         return {
             // 可以返回404
             notFound:true
         }
     }*/
-    return {
-        props: {data: '123'}
-    }
+  return {
+    props: { data: '123' },
+  }
 }

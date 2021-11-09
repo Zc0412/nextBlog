@@ -1,7 +1,5 @@
 const Nav = () => {
-    return <>
-        nav page
-    </>
+  return <>nav page</>
 }
 
 export default Nav
