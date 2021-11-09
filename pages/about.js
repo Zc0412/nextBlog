@@ -1,14 +1,18 @@
 import Nav from '@/components/Nav'
+import Clipboard from 'react-clipboard.js';
 
 import Button from '@/components/button'
 
 export default function About(props) {
-  console.log(props)
+
   return (
     <>
       <h1>About</h1>
       <Nav />
       <Button />
+      <Clipboard data-clipboard-text="I'll be copied">
+        copy to clipboard
+      </Clipboard>
     </>
   )
 }
